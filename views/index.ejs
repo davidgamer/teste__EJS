@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+  <% include partials/pages/head.ejs %>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% include partials/pages/navBar.ejs%>
+    <br></br>
+    <br></br>
+    <ul>
+      <% for (var i =0; i<users.length; i++){%>
+      <li><%= users[i] %></li>
+      <% } %>
+    </ul>
+    
+    <% include partials/pages/botstrap.ejs %>
   </body>
 </html>
